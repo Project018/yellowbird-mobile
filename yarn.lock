@@ -1419,9 +1419,9 @@
     exec-async "^2.2.0"
 
 "@expo/package-manager@~1.0.0":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@expo/package-manager/-/package-manager-1.0.1.tgz"
-  integrity sha512-ue6NIIsNafa2bK7zUl7Y61YNtkPsg7sJcTOyQo/87Yqf6Q+2bOrvdw1xjviaFrMsTZcpOPVf+ZIEYtE0lw0k6A==
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@expo/package-manager/-/package-manager-1.0.2.tgz"
+  integrity sha512-dlUp6o8qs1mi3/+l3y7cY3oMoqQVVzvH18cUTi6+t4ob8XwTpaeP2SwOP+obwZN29dMg9YzZAv4eQz+mshAbQA==
   dependencies:
     "@expo/json-file" "^8.2.37"
     "@expo/spawn-async" "^1.5.0"
@@ -3499,9 +3499,9 @@ fast-glob@^3.2.12, fast-glob@^3.2.5, fast-glob@^3.2.9:
     micromatch "^4.0.4"
 
 fast-xml-parser@^4.0.12:
-  version "4.2.4"
-  resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-4.2.4.tgz"
-  integrity sha512-fbfMDvgBNIdDJLdLOwacjFAPYt67tr31H9ZhWSm45CDAxvd0I6WTlSOUo7K2P/K5sA5JgMKG64PI3DMcaFdWpQ==
+  version "4.2.5"
+  resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-4.2.5.tgz"
+  integrity sha512-B9/wizE4WngqQftFPmdaMYlXoJlJOYxGQOanC77fq9k8+Z0v5dDSVh+3glErdIROP//s/jgb7ZuxKfB8nVyo0g==
   dependencies:
     strnum "^1.0.5"
 
@@ -6013,10 +6013,17 @@ react-native-gradle-plugin@^0.71.18:
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
 
-react-native-svg@^13.9.0:
-  version "13.9.0"
-  resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-13.9.0.tgz"
-  integrity sha512-Ey18POH0dA0ob/QiwCBVrxIiwflhYuw0P0hBlOHeY4J5cdbs8ngdKHeWC/Kt9+ryP6fNoEQ1PUgPYw2Bs/rp5Q==
+react-native-onboarding-swiper@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/react-native-onboarding-swiper/-/react-native-onboarding-swiper-1.2.0.tgz"
+  integrity sha512-UcQ9FTSPG/t12B7dddr62xtA7qHb+MEc/kQnkkUbeWas0+0fQPjTjiFcVZm5LI3CP5X0HVp7U1Rzfrpf3O9lJA==
+  dependencies:
+    tinycolor2 "^1.4.1"
+
+react-native-svg@13.4.0:
+  version "13.4.0"
+  resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-13.4.0.tgz"
+  integrity sha512-B3TwK+H0+JuRhYPzF21AgqMt4fjhCwDZ9QUtwNstT5XcslJBXC0FoTkdZo8IEb1Sv4suSqhZwlAY6lwOv3tHag==
   dependencies:
     css-select "^5.1.0"
     css-tree "^1.1.3"
@@ -6952,6 +6959,11 @@ through2@^2.0.1:
   dependencies:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
+
+tinycolor2@^1.4.1:
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/tinycolor2/-/tinycolor2-1.6.0.tgz"
+  integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==
 
 tmp@^0.0.33:
   version "0.0.33"
