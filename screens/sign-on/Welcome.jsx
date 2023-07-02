@@ -3,7 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { Alert, Image, Text, TextInput, Pressable, SafeAreaView, StyleSheet, View, ScrollView, KeyboardAvoidingView } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 
-export default function Welcome() {
+import CreateAccount from './CreateAccount';
+
+export default function Welcome({navigation}) {
   const [text, onChangeText] = React.useState('');
 
   const Separator = () => <View style={styles.divider} />;
@@ -45,25 +47,25 @@ export default function Welcome() {
           pages={[
             {
               backgroundColor: '#FEDF5E',
-              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/onboarding/welcomeToYellowbird.png')} />,
+              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/welcome-tour/welcomeToYellowbird.png')} />,
               title: 'Welcome to Yellowbird',
               subtitle: 'The app making financial education fun and easy',
             },
             {
               backgroundColor: '#FEDF5E',
-              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/onboarding/fiveMinutesADay.png')} />,
+              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/welcome-tour/fiveMinutesADay.png')} />,
               title: '5 minutes a day',
               subtitle: 'Take advantage of those small windows of time to learn',
             },
             {
               backgroundColor: '#FEDF5E',
-              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/onboarding/biteSizedPieces.png')} />,
+              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/welcome-tour/biteSizedPieces.png')} />,
               title: 'Bite-sized pieces',
               subtitle: 'Learn about complex topics in small, manageable pieces',
             },
             {
               backgroundColor: '#FEDF5E',
-              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/onboarding/funAndEngaging.png')} />,
+              image: <Image resizeMode={'contain'} style={styles.image} source={require('../../assets/welcome-tour/funAndEngaging.png')} />,
               title: 'Fun & engaging',
               subtitle: 'We gamified a few things to make learning fun',
             },
@@ -75,7 +77,6 @@ export default function Welcome() {
         <TextInput
           type="email"
           id="signOnEmail"
-          // autoFocus={true}
           clearButtonMode="while-editing"
           inputMode="email"
           keyboardType="email-address"
@@ -87,7 +88,7 @@ export default function Welcome() {
         <View className="my-2" />
         {/* Create an account button */}
         <Pressable
-          onPress={() => Alert.alert('Button with adjusted color pressed')}
+          onPress={() => navigation.navigate('CreateAccount')}
           accessibilityLabel="TODO"
           style={styles.button}
         >
