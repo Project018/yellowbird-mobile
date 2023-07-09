@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { StatusBar } from 'expo-status-bar';
-import { Alert, Image, Text, TextInput, Pressable, SafeAreaView, StyleSheet, View, ScrollView, KeyboardAvoidingView } from 'react-native';
+import { Alert, Image, Text, TextInput, Pressable, SafeAreaView, StyleSheet, View, KeyboardAvoidingView } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 
-import CreateAccount from './CreateAccount';
-
 export default function Welcome({navigation}) {
-  const [text, onChangeText] = React.useState('');
+  const [email, setEmail] = useState('');
+
 
   const Separator = () => <View style={styles.divider} />;
 
@@ -80,10 +79,10 @@ export default function Welcome({navigation}) {
           clearButtonMode="while-editing"
           inputMode="email"
           keyboardType="email-address"
-          className="mt-1 block w-full p-[13] bg-white rounded-md text-sm"
-          onChangeText={onChangeText}
+          onChangeText={text => setEmail(text)}
           placeholder="Enter your email"
-          value={text}
+          value={email}
+          style={styles.input}
         />
         <View className="my-2" />
         {/* Create an account button */}
@@ -128,6 +127,11 @@ const styles = StyleSheet.create({
     flexGrow: 2,
     flexShrink: 2,
     flexBasis: 50,
+  },
+  input: {
+    backgroundColor: "#fff",
+    borderRadius: 6,
+    padding: 15
   },
   buttonContainer: {
     flexGrow: 1,

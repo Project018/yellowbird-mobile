@@ -6,20 +6,19 @@ import { useTogglePasswordVisibility } from '../../hooks/useTogglePasswordVisibi
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function CreateAccount() {
-    const { passwordVisibility, rightIcon, handlePasswordVisibility } =
-    useTogglePasswordVisibility();
-  const [password, setPassword] = useState('');
-  const [text, onChangeText] = React.useState('');
+  const [name, setName] = useState('');
   const [focusName, setFocusName] = useState(false);
+  const [email, setEmail] = useState('');
   const [focusEmail, setFocusEmail] = useState(false);
+  const [password, setPassword] = useState('');
   const [focusPassword, setFocusPassword] = useState(false);
-  
+  const { passwordVisibility, rightIcon, handlePasswordVisibility } = useTogglePasswordVisibility();
 
   return (
     <KeyboardAvoidingView style={{flex: 1}} behavior={Platform.OS === 'ios' ? 'padding' : null}>
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={{marginVertical: 20, fontWeight: "700", fontSize: 20}}>Create Account</Text>
+        <Text style={styles.header}>Create Account</Text>
         <View style={styles.form}>
             <Text style={styles.label} htmlFor='name'>Name</Text>
             <TextInput
@@ -27,10 +26,9 @@ export default function CreateAccount() {
             id="name"
             inputMode="text"
             keyboardType="default"
-            className="mt-1 block w-full p-[13] bg-white rounded-md"
-            onChangeText={onChangeText}
+            onChangeText={text => setName(text)}
             placeholder="Enter your name"
-            value={text}
+            value={name}
             style={focusName ? styles.inputOnFocus : styles.input}
             onFocus={() => setFocusName(true)}
             onBlur={() => setFocusName(false)}
@@ -43,10 +41,9 @@ export default function CreateAccount() {
             id="email"
             inputMode="email"
             keyboardType="email-address"
-            className="mt-1 block w-full p-[13] bg-white rounded-md text-sm"
-            onChangeText={onChangeText}
+            onChangeText={text => setEmail(text)}
             placeholder="Enter your email"
-            value={text}
+            value={email}
             style={focusEmail ? styles.inputOnFocus : styles.input}
             onFocus={() => setFocusEmail(true)}
             onBlur={() => setFocusEmail(false)}
@@ -122,6 +119,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 20,
+  },
+  header: {
+    marginVertical: 20,
+    fontWeight: "700",
+    fontSize: 20,
   },
   form: {
     marginBottom: 25,
